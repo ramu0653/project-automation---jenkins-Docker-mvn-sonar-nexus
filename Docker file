@@ -1,1 +1,3 @@
-
+FROM tomcat9.0.80-jdk11
+# Dummy text to test 
+COPY targetmyweb.war usrlocaltomcatwebappsmyweb.war
