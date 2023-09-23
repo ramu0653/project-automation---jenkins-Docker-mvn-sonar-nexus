@@ -1,0 +1,26 @@
+1  yum install -y java-11*
+    2  cd /opt
+    3  wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip
+    4  unzip sonarqube-8.9.10.61524.zip
+    5  mv sonarqube-8.9.10.61524 sonar
+    6  ls
+    7  useradd sonar
+    8  passwd sonar
+    9  chown -R sonar:sonar sonar
+   10  ls
+   11  cd sonar/
+   12  ls
+   13  cd bin/
+   14  ll
+   15  cd linux-x86-64/
+   16  ls
+   17  vi sonar.sh
+   18  ./sonar.sh
+   19  ./sonar.sh start
+   20  ./sonar.sh status 
+
+RUN_AS_USER=sonar        -------> give this vi sonar.sh 
+
+Amazon Linux 2 AMI ---ec2instance t2.medium
+
+sonar-token:-   ram: 2a09d4ec94abe14ae912982ad4106fecf9c0e356

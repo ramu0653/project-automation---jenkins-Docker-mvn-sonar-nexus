@@ -1,0 +1,23 @@
+Jenkins plugins installed in this project are:
+
+1.Nexus Artifact Uploader
+2.sonar.hpi from local laptop using advanced settings --jenkins
+
+Pipeline syntax used in this project:
+
+1.git: Git
+
+2.nexusArtifactUploader: Nexus Artifact Uploader
+Nexus Version --Nexus3
+Credentials -username & Passwd --(admin ,admin), ID--- nexus3
+GroupId -- in.javahome
+Version  --  8.2.0
+Repository ---   sample-releases
+Artifact -->add--- arifact id: myweb, Type: war, File: target/myweb-8.2.0.war
+
+
+3.withCredentials: Bind credentials to variables  ----secret text -----
+variable: DOCKER_HUB_CREDENTIALS
+Credentials: add---kind--secret text---147R1a0329(Dockerhub passwd) Id-DOCKER_HUB_CREDENTIALS
+  
+

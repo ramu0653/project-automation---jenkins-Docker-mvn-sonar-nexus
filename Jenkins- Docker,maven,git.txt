@@ -1,0 +1,23 @@
+ 1   yum install -y java-17*
+    2  yum install -y git
+    3  yum install -y maven
+    4  wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    5  rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+    6  yum install jenkins -y
+    7  service jenkins start
+    8  chkconfig jenkins on
+    9  cat /var/lib/jenkins/secrets/initialAdminPassword
+   10  yum install -y docker
+   11  service docker start
+   12  sudo usermod -aG docker jenkins
+   13  chmod 777 /var/run/docker.sock
+   14  vi /etc/maven/settings.xml 
+
+
+
+<server>
+      <id>nexusRepo</id>
+      <username>admin</username>
+      <password>ramu0653</password>
+    </server>                                               ---->give this in jenkins ec2-instance vi /etc/maven/settings.xml under servers
+
